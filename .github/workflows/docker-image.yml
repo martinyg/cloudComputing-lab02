@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)'
     - name: Docke Push
-      run docker push ${{secrets.DOCKER_USER}}/cloudcomputing-lab02
+      run: docker push ${{secrets.DOCKER_USER}}/cloudcomputing-lab02
