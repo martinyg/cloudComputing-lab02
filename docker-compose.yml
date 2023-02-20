@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  cloudcomputinglab02:
+    image: cloudcomputinglab02
+    build:
+      context: .
+      dockerfile: ./Dockerfile
