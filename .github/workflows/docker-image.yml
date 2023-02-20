@@ -16,11 +16,11 @@ jobs:
     - uses: actions/checkout@v3
     - name: docker login
       env:
-        DOCKER_USER: ${{secrets.DOCKER_USER}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        DOCKER_USER: martinyg
+        DOCKER_PASSWORD: EARTHcolor908
       run:
-        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+        docker login -u martinyg -p EARTHcolor908
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/cloudcomputing-lab02
+      run: docker push martinyg/cloudcomputing-lab02
